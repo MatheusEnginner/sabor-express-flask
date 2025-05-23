@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}Editar Restaurante{% endblock %}
+
+{% block content %}
+    <h2>Editar Restaurante: {{ restaurante.nome }}</h2>
+    <form method="POST">
+        <label for="nome">Nome do Restaurante:</label>
+        <input type="text" id="nome" name="nome" value="{{ restaurante.nome }}" required>
+
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" name="categoria" value="{{ restaurante.categoria }}" required>
+
+        <label for="localizacao">Localização (Ex: Rua X, Bairro Y, Cidade Z):</label>
+        <input type="text" id="localizacao" name="localizacao" value="{{ restaurante.localizacao }}" required>
+        
+        <button type="submit">Salvar Alterações</button>
+    </form>
+    <p><a href="{{ url_for('dashboard') }}">← Voltar para o Dashboard</a></p>
+{% endblock %}

@@ -1,0 +1,20 @@
+{
+    "1": [
+        {
+            "id": 1,
+            "nome": " McDonald's",
+            "categoria": "FastFood",
+            "localizacao": "Rua Paraguacu carneiro 290",
+            "ativo": false
+        }
+    ],
+    "2": [
+        {
+            "id": 2,
+            "nome": " Starbucks",
+            "categoria": "FastFood",
+            "localizacao": "Rua Paraguacu carneiro 290",
+            "ativo": true
+        }
+    ]
+}

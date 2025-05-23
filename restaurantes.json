@@ -1,0 +1,11 @@
+{
+    "2": [
+        {
+            "id": "0dd5e5ef-c1e3-426a-ae6b-359c2ecdb2a8",
+            "nome": "Subway",
+            "categoria": "FastFood",
+            "localizacao": "Rua Paraguacu carneiro 290",
+            "ativo": true
+        }
+    ]
+}

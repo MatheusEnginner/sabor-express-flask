@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h2>Bem-vindo, {{ username }}!</h2>
+    <h3>Meus Restaurantes</h3>
+    <p>
+        <a href="{{ url_for('adicionar_restaurante_web') }}" class="link-button">Cadastrar Novo Restaurante</a>
+    </p>
+
+    {% if restaurantes %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Localização</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in restaurantes %}
+                <tr>
+                    <td>{{ loop.index }}</td> {# Usando loop.index para um ID visual, o ID real é UUID #}
+                    <td>{{ r['nome'] }}</td>
+                    <td>{{ r['categoria'] }}</td>
+                    <td>{{ r['localizacao'] }}</td>
+                    <td>
+                        <span class="{{ 'status-ativo' if r['ativo'] else 'status-inativo' }}">
+                            {{ '✅ Ativo' if r['ativo'] else '❌ Inativo' }}
+                        </span>
+                    </td>
+                    <td class="action-buttons">
+                        <a href="{{ url_for('gerenciar_cardapio', restaurante_id=r['id']) }}">🍽️ Cardápio</a>
+                        <a href="{{ url_for('editar_restaurante', restaurante_id=r['id']) }}" class="edit-btn">✏️ Editar</a>
+                        <a href="{{ url_for('alternar_status_restaurante_web', restaurante_id=r['id']) }}"
+                           class="toggle-status-btn {{ 'active' if r['ativo'] else 'inactive' }}">
+                            {% if r['ativo'] %}
+                                Desativar
+                            {% else %}
+                                Ativar
+                            {% endif %}
+                        </a>
+                        <a href="{{ url_for('deletar_restaurante_web', restaurante_id=r['id']) }}"
+                           class="delete-btn" onclick="return confirm('Tem certeza que deseja deletar este restaurante e seu cardápio?');">🗑️ Deletar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Você ainda não cadastrou nenhum restaurante.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}Adicionar Restaurante{% endblock %}
+
+{% block content %}
+    <h2>Adicionar Novo Restaurante</h2>
+    <form method="POST" action="{{ url_for('adicionar_restaurante_web') }}">
+        <label for="nome">Nome do Restaurante:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" name="categoria" required>
+
+        <label for="localizacao">Localização (Ex: Rua X, Bairro Y, Cidade Z):</label>
+        <input type="text" id="localizacao" name="localizacao" required>
+        
+        <button type="submit">Adicionar</button>
+    </form>
+    <p><a href="{{ url_for('dashboard') }}">← Voltar para o Dashboard</a></p>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}Explorar Restaurantes{% endblock %}
+
+{% block content %}
+    <h2>Restaurantes Disponíveis</h2>
+
+    {% if restaurantes %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Localização</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for restaurante in restaurantes %}
+                <tr>
+                    <td>{{ restaurante['nome'] }}</td>
+                    <td>{{ restaurante['categoria'] }}</td>
+                    <td>{{ restaurante['localizacao'] }}</td>
+                    <td class="action-buttons">
+                        <a href="{{ url_for('visualizar_cardapio', restaurante_id=restaurante['id']) }}">Ver Cardápio</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Nenhum restaurante ativo disponível para explorar no momento.</p>
+    {% endif %}
+{% endblock %}

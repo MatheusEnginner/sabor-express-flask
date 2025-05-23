@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Express</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Estilos básicos para o formulário e tabela, pode ser movido para style.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px; /* Espaçamento entre os elementos do formulário */
+            align-items: center;
+        }
+        form input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            flex-grow: 1; /* Faz os inputs ocuparem o espaço disponível */
+        }
+        form button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden; /* Para garantir que o border-radius funcione com bordas */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #555;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .status-ativo {
+            color: green;
+            font-weight: bold;
+        }
+        .status-inativo {
+            color: red;
+        }
+        .status-toggle-link {
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            display: inline-block; /* Para o padding e margem */
+        }
+        .status-toggle-link.ativo {
+            background-color: #dc3545; /* Vermelho para desativar (está ativo) */
+        }
+        .status-toggle-link.inativo {
+            background-color: #28a745; /* Verde para ativar (está inativo) */
+        }
+    </style>
+</head>
+<body>
+    <h1>🍽️ Sabor Express</h1>
+
+    <form method="POST" action="/"> <input name="nome" placeholder="Nome do restaurante" type="text" required>
+        <input name="categoria" placeholder="Categoria" type="text" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>📋 Restaurantes Cadastrados</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Status</th>
+                <th>Ações</th> </tr>
+        </thead>
+        <tbody>
+            {% if restaurantes %}
+                {% for r in restaurantes %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ r['nome'] }}</td>
+                    <td>{{ r['categoria'] }}</td>
+                    <td>
+                        <span class="{{ 'status-ativo' if r['ativo'] else 'status-inativo' }}">
+                            {{ '✅ Ativo' if r['ativo'] else '❌ Inativo' }}
+                        </span>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('alternar_status_web', restaurante_id=loop.index) }}"
+                           class="status-toggle-link {{ 'ativo' if r['ativo'] else 'inativo' }}">
+                           {% if r['ativo'] %}
+                               Desativar
+                           {% else %}
+                               Ativar
+                           {% endif %}
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="5">⚠️ Nenhum restaurante cadastrado ainda.</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</body>
+</html>
