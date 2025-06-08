@@ -358,4 +358,4 @@ if __name__ == '__main__':
     carregar_usuarios()
     carregar_restaurantes_por_usuario()
     carregar_cardapios()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
