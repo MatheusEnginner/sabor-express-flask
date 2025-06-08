@@ -1,26 +1,8 @@
 [
     {
         "id": 1,
-        "username": "Kazumaa",
-        "password": "pbkdf2:sha256:260000$yQrB7mcFDNszfL99$534047bce44c62932a166b28ad09cca2f5339982d852d11868ba5b1b127b415a",
-        "role": "empresario"
-    },
-    {
-        "id": 2,
         "username": "Mateus1608",
-        "password": "pbkdf2:sha256:260000$gV85OIalH8CAvmU3$f7241bf37bd28ac5c829a40f34eecec272f956e30430b84cedcac7abeb062e7b",
+        "password": "pbkdf2:sha256:260000$YElmMkxXCusMQCep$a61d81ed57458ba21e4962d4bc882ef61dc3f4b49190393b4246ddc5e42e298c",
         "role": "empresario"
-    },
-    {
-        "id": 3,
-        "username": "Kazuma",
-        "password": "pbkdf2:sha256:260000$PXo3LrLk0pdhfEqy$8f93c095c55f0d92fb0c7bc944bc71bc363f0d796f6fdbcb5fab9116d5fc80dc",
-        "role": "cliente"
-    },
-    {
-        "id": 4,
-        "username": "kazuma",
-        "password": "pbkdf2:sha256:260000$DtmKdcA6khq1LvjI$d9ea226ba7cb707a2c0f67e1b5769eb47e1e55a64282806034b63488298e76f6",
-        "role": "cliente"
     }
 ]

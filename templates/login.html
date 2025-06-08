@@ -3,6 +3,10 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
+    <div style="text-align: center; margin-bottom: 20px;">
+        <img src="{{ url_for('static', filename='images/login_banner.png') }}" alt="Banner de login" style="width: 100%; max-width: 300px; border-radius: 12px;">
+    </div>
+
     <h2>Login</h2>
     <form method="POST">
         <label for="username">Nome de Usuário:</label>

@@ -7,5 +7,23 @@
             "localizacao": "Rua Paraguacu carneiro 290",
             "ativo": true
         }
+    ],
+    "5": [
+        {
+            "id": "d0194253-2479-4cec-abab-c6966caf1491",
+            "nome": "Restaurante do TH",
+            "categoria": "FastFood",
+            "localizacao": "Rua como bunda 24",
+            "ativo": true
+        }
+    ],
+    "1": [
+        {
+            "id": "ff753c71-ab1d-4b50-93ac-13b4019e89f4",
+            "nome": " McDonald's",
+            "categoria": "FastFood",
+            "localizacao": "Rua Paraguacu carneiro 290",
+            "ativo": true
+        }
     ]
 }

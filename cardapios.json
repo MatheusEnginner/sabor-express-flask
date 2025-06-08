@@ -7,5 +7,23 @@
             "tipo": "lanche",
             "descricao": "paga e fique calado"
         }
+    ],
+    "d0194253-2479-4cec-abab-c6966caf1491": [
+        {
+            "id": "d17b7b2b-f3be-43d8-8e19-1e6994f34355",
+            "nome_prato": "X-Montanha",
+            "preco": 59.0,
+            "tipo": "lanche",
+            "descricao": "pao e ovo"
+        }
+    ],
+    "ff753c71-ab1d-4b50-93ac-13b4019e89f4": [
+        {
+            "id": "21d39d77-412f-4fc6-a30e-3d7ec6ce4848",
+            "nome_prato": "BigMac",
+            "preco": 23.67,
+            "tipo": "lanche",
+            "descricao": "Detalhes do Big Mac:\r\nIngredientes:\r\nDois hambúrgueres de carne bovina, uma fatia de queijo cheddar, alface americana, picles, cebola picada e o molho especial do McDonald's. \r\nPão:\r\nPão de hambúrguer de três fatias com gergelim. \r\nMolho:\r\nO molho especial é uma mistura de ingredientes, incluindo maionese, ketchup, molho inglês e especiarias. \r\nMontagem:\r\nO sanduíche é montado com a base do pão, o molho, os hambúrgueres, a fatia de queijo, o picles, a cebola, o alface e, por fim, a tampa do pão. "
+        }
     ]
 }
