@@ -1,8 +1,38 @@
 [
     {
-        "id": 1,
+        "id": 2,
+        "username": "Thiago",
+        "password": "pbkdf2:sha256:260000$7EF9SAn1OgqCM7bt$2b9e85ffe84342a868c863f1d912bfb0fbd84b0db78e762c0acef13e0ed14ede",
+        "role": "cliente"
+    },
+    {
+        "id": 3,
+        "username": "Mateus",
+        "password": "pbkdf2:sha256:260000$T2RmPSK2FLnjuJa5$9e45cb8588e06fd23895b8136e478219874a52c97dc9279254ba9ab0a5ec3b65",
+        "role": "empresario"
+    },
+    {
+        "id": 4,
+        "username": "Renan",
+        "password": "pbkdf2:sha256:260000$yYGtCg8eu9aLvcIC$ba5ce0640b500ffad181224af7cf56e989a665af78a4f2f5400ec5fca3a2fa15",
+        "role": "empresario"
+    },
+    {
+        "id": 5,
+        "username": "Mateus1",
+        "password": "pbkdf2:sha256:260000$elQVKPVeM5hGajNG$ca3e8c0b8673a48a4bfb82730023d161e9027d8fdf8d11d94a5c710e19a16fa7",
+        "role": "cliente"
+    },
+    {
+        "id": 5,
         "username": "Mateus1608",
-        "password": "pbkdf2:sha256:260000$YElmMkxXCusMQCep$a61d81ed57458ba21e4962d4bc882ef61dc3f4b49190393b4246ddc5e42e298c",
+        "password": "pbkdf2:sha256:260000$5PHxEtZqrMYIKvPa$53255a13db012a25119d19ea4573098a6560112f6fe8dfa14a4ccaafda2bd3c2",
+        "role": "empresario"
+    },
+    {
+        "id": 6,
+        "username": "marcelo",
+        "password": "pbkdf2:sha256:260000$IVw2CjPyzmMIxQQB$53bdd9f18117741474efb6e78ea79c0175fbd10e98a2707789bd3e711a9e796b",
         "role": "empresario"
     }
 ]

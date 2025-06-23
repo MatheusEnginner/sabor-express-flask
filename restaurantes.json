@@ -25,5 +25,14 @@
             "localizacao": "Rua Paraguacu carneiro 290",
             "ativo": true
         }
+    ],
+    "4": [
+        {
+            "id": "6c20ee6b-3427-4c8c-aa3e-6246cb97e41c",
+            "nome": "Renan Foods",
+            "categoria": "FastFood",
+            "localizacao": "Rua como bunda 24",
+            "ativo": true
+        }
     ]
 }

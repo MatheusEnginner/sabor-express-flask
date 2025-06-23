@@ -25,5 +25,14 @@
             "tipo": "lanche",
             "descricao": "Detalhes do Big Mac:\r\nIngredientes:\r\nDois hambúrgueres de carne bovina, uma fatia de queijo cheddar, alface americana, picles, cebola picada e o molho especial do McDonald's. \r\nPão:\r\nPão de hambúrguer de três fatias com gergelim. \r\nMolho:\r\nO molho especial é uma mistura de ingredientes, incluindo maionese, ketchup, molho inglês e especiarias. \r\nMontagem:\r\nO sanduíche é montado com a base do pão, o molho, os hambúrgueres, a fatia de queijo, o picles, a cebola, o alface e, por fim, a tampa do pão. "
         }
+    ],
+    "6c20ee6b-3427-4c8c-aa3e-6246cb97e41c": [
+        {
+            "id": "f28bbaf3-f70e-4633-9a4b-96d7d2892db1",
+            "nome_prato": "BigMac",
+            "preco": 102.0,
+            "tipo": "lanche",
+            "descricao": "pisayugfuoy"
+        }
     ]
 }

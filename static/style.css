@@ -5,7 +5,12 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
-    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    /* MUDANÇA AQUI: Fundo com tons de vermelho ou neutro */
+    /* Opção 1: Gradiente com tons de vermelho */
+    background: linear-gradient(135deg, #FFDADA, #F0A0A0); /* Tons suaves de vermelho */
+    /* Opção 2: Fundo mais neutro, se os elementos forem vermelhos */
+    /* background: linear-gradient(135deg, #f0f4f8, #d9e2ec); */ /* Mantém o fundo original claro */
+    
     color: #2c3e50;
     display: flex;
     flex-direction: column;
@@ -14,20 +19,23 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #3498db; /* azul vibrante */
+    /* MUDANÇA AQUI: Cor de fundo da navbar para vermelho */
+    background-color: #E74C3C; /* Vermelho vibrante (Alizarin) */
     padding: 15px 30px;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+    /* Ajustar a sombra para um tom de vermelho */
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3); /* Sombra avermelhada */
     position: sticky;
     top: 0;
     z-index: 1000;
     transition: background-color 0.3s ease;
 }
 .navbar:hover {
-    background-color: #2980b9;
+    /* MUDANÇA AQUI: Cor de hover da navbar para um vermelho mais escuro */
+    background-color: #C0392B; /* Vermelho mais escuro (Pomegranate) */
 }
 .navbar a {
     color: white;
@@ -38,7 +46,8 @@ body {
     transition: color 0.3s ease;
 }
 .navbar a:hover {
-    color: #f1c40f; /* amarelo */
+    /* MUDANÇA AQUI: Cor de hover dos links da navbar para um vermelho diferente ou branco */
+    color: #FFECB3; /* Amarelo claro, ou pode ser branco puro: #FFFFFF; */
     text-decoration: underline;
 }
 
@@ -57,7 +66,7 @@ body {
     box-shadow: 0 12px 24px rgba(44, 62, 80, 0.15);
 }
 
-/* Mensagens flash */
+/* Mensagens flash (Manter cores originais ou ajustar levemente para compatibilidade) */
 .flash-messages {
     list-style: none;
     padding: 0;
@@ -145,12 +154,14 @@ form input[type="password"]:focus,
 form input[type="number"]:focus,
 form textarea:focus,
 form select:focus {
-    border-color: #3498db;
+    /* MUDANÇA AQUI: Borda e sombra de foco do input para vermelho */
+    border-color: #E74C3C; /* Vermelho */
     outline: none;
-    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.3);
 }
 form button {
-    background-color: #3498db;
+    /* MUDANÇA AQUI: Botões de formulário para vermelho */
+    background-color: #E74C3C; /* Vermelho */
     color: white;
     padding: 14px 24px;
     border: none;
@@ -161,7 +172,8 @@ form button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 form button:hover {
-    background-color: #2980b9;
+    /* MUDANÇA AQUI: Hover dos botões de formulário para vermelho mais escuro */
+    background-color: #C0392B; /* Vermelho mais escuro */
     transform: scale(1.05);
 }
 
@@ -193,7 +205,8 @@ tr:nth-child(even) {
     background-color: #f9fbfc;
 }
 tr:hover {
-    background-color: #e1f0fb;
+    background-color: #e1f0fb; /* Manter este tom de azul claro para hover da tabela ou mudar para um tom avermelhado muito suave */
+    /* Ou: background-color: #FFF5F5; */
     transition: background-color 0.3s ease;
 }
 
@@ -206,55 +219,62 @@ tr:hover {
 
 .action-buttons a,
 .action-buttons button {
-    background-color: #2980b9;
+    /* MUDANÇA AQUI: Botões de ação secundários para vermelho */
+    background-color: #E74C3C; /* Vermelho (Alizarin) */
     color: white;
-    padding: 6px 12px;      /* Padding reduzido para botões menores */
+    padding: 6px 12px;
     border-radius: 8px;
     text-decoration: none;
-    font-size: 0.85rem;     /* Fonte um pouco menor */
+    font-size: 0.85rem;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.2s ease;
-    box-shadow: 0 3px 6px rgba(41, 128, 185, 0.3);
-    max-width: 110px;       /* Largura máxima para evitar estouro */
-    white-space: nowrap;    /* Previne quebra de texto */
+    /* Ajustar a sombra para um tom de vermelho */
+    box-shadow: 0 3px 6px rgba(231, 76, 60, 0.3);
+    max-width: 110px;
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Texto longo fica com reticências */
+    text-overflow: ellipsis;
 }
 
 .action-buttons a:hover,
 .action-buttons button:hover {
-    background-color: #1c5980;
-    box-shadow: 0 5px 10px rgba(28, 89, 128, 0.5);
-}
-
-.action-buttons .delete-btn {
-    background-color: #e74c3c;
-    box-shadow: 0 3px 6px rgba(231, 76, 60, 0.3);
-}
-
-.action-buttons .delete-btn:hover {
-    background-color: #c0392b;
+    /* MUDANÇA AQUI: Hover dos botões de ação para vermelho mais escuro */
+    background-color: #C0392B; /* Vermelho mais escuro (Pomegranate) */
+    /* Ajustar a sombra para um tom de vermelho mais escuro */
     box-shadow: 0 5px 10px rgba(192, 57, 43, 0.5);
 }
 
+.action-buttons .delete-btn {
+    /* Já é vermelho, pode manter ou ajustar o tom */
+    background-color: #c0392b; /* Um vermelho mais profundo para o delete */
+    box-shadow: 0 3px 6px rgba(192, 57, 43, 0.3);
+}
+
+.action-buttons .delete-btn:hover {
+    background-color: #a93226; /* Um vermelho ainda mais escuro para o hover do delete */
+    box-shadow: 0 5px 10px rgba(169, 50, 38, 0.5);
+}
+
 .action-buttons .edit-btn {
-    background-color: #f39c12;
-    color: #2c3e50;
+    /* MUDANÇA AQUI: Botão de editar para um tom de vermelho/laranja ou manter laranja para contraste */
+    background-color: #F39C12; /* Laranja (Sunflower) - bom para contraste com vermelho */
+    /* background-color: #D35400; */ /* Laranja mais avermelhado */
+    color: white; /* Alterar para white se o fundo for escuro */
     box-shadow: 0 3px 6px rgba(243, 156, 18, 0.3);
 }
 
 .action-buttons .edit-btn:hover {
-    background-color: #d68910;
+    background-color: #D68910; /* Laranja mais escuro */
     box-shadow: 0 5px 10px rgba(214, 137, 16, 0.5);
 }
 
 .action-buttons .toggle-status-btn.active {
-    background-color: #e74c3c; /* vermelho para desativar */
+    background-color: #e74c3c; /* vermelho para desativar - pode manter */
 }
 
 .action-buttons .toggle-status-btn.inactive {
-    background-color: #27ae60; /* verde para ativar */
+    background-color: #27ae60; /* verde para ativar - pode manter ou alterar para um azul/roxo se quiser fugir do verde */
 }
 
 .action-buttons .toggle-status-btn:hover {
@@ -263,12 +283,12 @@ tr:hover {
 
 /* Status */
 .status-ativo {
-    color: #27ae60;
+    color: #27ae60; /* Verde para ativo - pode manter ou ajustar para um tom que contraste bem com vermelho */
     font-weight: 700;
     font-size: 1.05rem;
 }
 .status-inativo {
-    color: #e74c3c;
+    color: #e74c3c; /* Vermelho para inativo - pode manter */
     font-weight: 700;
     font-size: 1.05rem;
 }
@@ -284,6 +304,3 @@ tr:hover {
     }
     .container {
         margin: 15px 10px;
-        padding: 20px 15px;
-    }
-    table,
